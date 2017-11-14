@@ -1,3 +1,5 @@
+DROP TABLE vendors;
+
 CREATE TABLE vendors (
     company_id    INT           NOT NULL,
     company_name  VARCHAR(20)   NOT NULL,
@@ -19,7 +21,7 @@ CREATE TABLE vendors (
 INSERT INTO vendors (company_id,company_name,website_url,address_1,address_2,zip_code,city,state,country,logo_url,vendor_risk,certified_status,sanction_status) VALUES (1,"Schlumberger","slb.com","5599 San Felipe St","","77056","Houston","TX","USA","https://git.rhlabs.net/oildemo/taskman/raw/master/images/1.jpg","","","");
 INSERT INTO vendors (company_id,company_name,website_url,address_1,address_2,zip_code,city,state,country,logo_url,vendor_risk,certified_status,sanction_status) VALUES (2,"Halliburton","halliburton.com","3000 N. Sam Houston Pkwy E.","","77032","Houston","TX","USA","https://git.rhlabs.net/oildemo/taskman/raw/master/images/2.jpg","","","");
 INSERT INTO vendors (company_id,company_name,website_url,address_1,address_2,zip_code,city,state,country,logo_url,vendor_risk,certified_status,sanction_status) VALUES (3,"Baker Hughes","bhge.com","17021 Aldine Westfield","","77073","Houston","TX","USA","https://git.rhlabs.net/oildemo/taskman/raw/master/images/3.jpg","","","");
-INSERT INTO vendors (company_id,company_name,website_url,address_1,address_2,zip_code,city,state,country,logo_url,vendor_risk,certified_status,sanction_status) VALUES (4,"Cubility","cubility.com",""Fabrikkveien 40"," 4323"","","","Sandnes","","Norway","https://git.rhlabs.net/oildemo/taskman/raw/master/images/4.jpg","","");
+INSERT INTO vendors (company_id,company_name,website_url,address_1,address_2,zip_code,city,state,country,logo_url,vendor_risk,certified_status,sanction_status) VALUES (4,"Cubility","cubility.com","Fabrikkveien 40"," 4323","","","Sandnes","","Norway","https://git.rhlabs.net/oildemo/taskman/raw/master/images/4.jpg","","");
 INSERT INTO vendors (company_id,company_name,website_url,address_1,address_2,zip_code,city,state,country,logo_url,vendor_risk,certified_status,sanction_status) VALUES (5,"Hoerbiger","hoerbiger.com","3350 Gateway Drive","","33069","Pompano Beach","FL","USA","https://git.rhlabs.net/oildemo/taskman/raw/master/images/5.jpg","","","");
 INSERT INTO vendors (company_id,company_name,website_url,address_1,address_2,zip_code,city,state,country,logo_url,vendor_risk,certified_status,sanction_status) VALUES (6,"Utex Industries","amerifrac.com","245 Koomey Rd","","77423","Brookshire","TX","USA","https://git.rhlabs.net/oildemo/taskman/raw/master/images/6.jpg","","","");
 INSERT INTO vendors (company_id,company_name,website_url,address_1,address_2,zip_code,city,state,country,logo_url,vendor_risk,certified_status,sanction_status) VALUES (7,"Summit","summitesp.com","835 West 41st Street South","","74107","Tulsa","OK","USA","https://git.rhlabs.net/oildemo/taskman/raw/master/images/7.jpg","","","");
