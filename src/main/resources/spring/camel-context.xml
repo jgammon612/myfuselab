@@ -22,12 +22,12 @@
         <rest path="/vendor">
             <get uri="all">
                 <description>Retrieve all vendor data</description>
-                <to uri="direct:getallvendor"/>
+                <to uri="direct:getallvendors"/>
             </get>
         </rest>
         <route id="vendor">
             <!--  <from id="_from1" uri="timer:timerName?repeatCount=1"/> -->
-            <from id="direct1" uri="direct:getallcustomer"/>
+            <from id="direct1" uri="direct:getallvendors"/>
             <to id="_to1" uri="sql:select * from vendors?dataSource=dataSource"/>
             <log id="_log1" message="${body}"/>
         </route>
