@@ -19,26 +19,17 @@
             <apiProperty key="api.version" value="1.0.0"/>
         </restConfiguration>
         <!-- Right above route id="customer" -->
-        <rest path="/customer">
+        <rest path="/vendor">
             <get uri="all">
-                <description>Retrieve all customer data</description>
-                <to uri="direct:getallcustomer"/>
-            </get>
-            <get uri="{custid}">
-                <description>Retrieve customer by id</description>
-                <to uri="direct:getcustomer"/>
+                <description>Retrieve all vendor data</description>
+                <to uri="direct:getallvendor"/>
             </get>
         </rest>
-        <route id="customer">
+        <route id="vendor">
             <!--  <from id="_from1" uri="timer:timerName?repeatCount=1"/> -->
             <from id="direct1" uri="direct:getallcustomer"/>
-            <to id="_to1" uri="sql:select * from customerdemo?dataSource=dataSource"/>
+            <to id="_to1" uri="sql:select * from vendors?dataSource=dataSource"/>
             <log id="_log1" message="${body}"/>
-        </route>
-        <route id="singlecustomer">
-            <from id="direct2" uri="direct:getcustomer"/>
-            <to id="_to2" uri="sql:select * from customerdemo where customerID=:#custid?dataSource=dataSource"/>
-            <log id="_log2" message="${body}"/>
         </route>
     </camelContext>
 </beans>
