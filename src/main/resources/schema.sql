@@ -15,7 +15,7 @@ CREATE TABLE vendors (
     certified_status     VARCHAR(20),
     sanction_status      VARCHAR(20),
     itemid        int,
-    country_id   VARCHAR(2)	
+    country_id   VARCHAR(2),	
     PRIMARY KEY (company_id)
 );
 
@@ -25,8 +25,9 @@ CREATE TABLE sanctions (
    country      VARCHAR(15)	NOT NULL,
    country_code	INT	NOT NULL,
    sanction_start	DATE	NOT NULL,
-   sanction_duration	VARCHAR(3)	NOT NULL
+   sanction_duration	VARCHAR(3)	NOT NULL,
    PRIMARY KEY (sanction_id)
+);
 
 INSERT INTO sanctions (sanction_id,country_id,country,country_code,sanction_start,sanction_duration) VALUES (1,"MM","Burma",95,"1988-01-01",100);
 INSERT INTO sanctions (sanction_id,country_id,country,country_code,sanction_start,sanction_duration) VALUES (2,"CI","Cote de Ivoire",225,"2004-11-15",100);
