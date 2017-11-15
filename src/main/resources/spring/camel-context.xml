@@ -24,7 +24,7 @@
                 <description>Retrieve all vendor data</description>
                 <to uri="direct:getallvendors"/>
             </get>
-            <get uri="{itemid}">
+            <get uri="/vendor/{itemid}">
                 <description>Retrieve all Validated vendors by itemid</description>
                 <to uri="direct:getvalidvendors"/>
             </get>
