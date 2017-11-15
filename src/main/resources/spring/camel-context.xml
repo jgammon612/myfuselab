@@ -24,12 +24,21 @@
                 <description>Retrieve all vendor data</description>
                 <to uri="direct:getallvendors"/>
             </get>
+            <get uri="{itemid}">
+                <description>Retrieve all Validated vendors by itemid</description>
+                <to uri="direct:getvalidvendors"/>
+            </get>
         </rest>
         <route id="vendor">
             <!--  <from id="_from1" uri="timer:timerName?repeatCount=1"/> -->
             <from id="direct1" uri="direct:getallvendors"/>
             <to id="_to1" uri="sql:select * from vendors?dataSource=dataSource"/>
             <log id="_log1" message="${body}"/>
+        </route>
+        <route id="_route1">
+            <from id="_from1" uri="direct:getvalidvendors"/>
+            <to id="_to2" uri="sql:select DISTINCT(company_name),company_name,website_url,address_1,address_2,zip_code,city,state,country,logo_url,vendor_risk,certified_status,sanction_status,itemid,country_id from vendors v,sanctions s where v.itemid=:#itemid and v.country_id NOT IN (Select country_id from sanctions)?dataSource=dataSource "/>
+            <log id="_log2" message="${body}"/>
         </route>
     </camelContext>
 </beans>
